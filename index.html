@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>設計・藝術・建築全球脈絡時間表</title>
+  <meta name="description" content="從文藝復興到當代的全球藝術史、設計史與建築史互動時間表。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="side" aria-label="主要導覽">
+      <div class="mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none">
+          <path d="M7 45c15-2 28-15 33-36M7 45h50M40 9v48M12 53c11-21 22-31 45-34" stroke="currentColor"/>
+          <path d="M22 45a18 18 0 1 1 36 0" stroke="currentColor"/>
+        </svg>
+      </div>
+      <nav class="side-nav">
+        <a href="#timeline" aria-current="page">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></svg>
+          <span>時間表</span>
+        </a>
+        <a href="#periods">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5h16M4 12h16M4 19h16"/><path d="M7 5v14M17 5v14"/></svg>
+          <span>主題探索</span>
+        </a>
+        <a href="#image-atlas">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="5" width="16" height="14"/><path d="m7 16 4-4 3 3 2-2 3 3"/><circle cx="9" cy="9" r="1.4"/></svg>
+          <span>歷史圖片</span>
+        </a>
+        <a href="#sources">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
+          <span>資料來源</span>
+        </a>
+      </nav>
+      <div class="side-foot">
+        <span>從文藝復興到目前</span>
+        <span>繁 / EN</span>
+      </div>
+    </aside>
+
+    <main>
+      <header class="hero">
+        <div>
+          <h1>設計・藝術・建築全球脈絡時間表</h1>
+          <p>從文藝復興到當代，並置全球事件、藝術觀念、設計制度與建築城市，理解創作如何回應技術、權力、貿易、戰爭與日常生活。</p>
+        </div>
+        <div class="hero-tools" aria-label="時間表工具">
+          <label class="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg>
+            <input id="searchInput" type="search" placeholder="搜尋年代、流派、城市">
+          </label>
+          <select id="rangeSelect" class="select" aria-label="選擇時間尺度">
+            <option value="all">1400 至今</option>
+            <option value="renaissance">文藝復興與早期近代</option>
+            <option value="industrial">工業化與現代性</option>
+            <option value="modern">現代主義與戰後</option>
+            <option value="contemporary">全球化與數位時代</option>
+          </select>
+        </div>
+      </header>
+
+      <section class="panel" id="timeline" aria-label="全球脈絡時間表">
+        <div class="timeline-wrap">
+          <div class="filters" aria-label="分類篩選">
+            <button class="filter-btn" data-filter="all" aria-pressed="true">全部</button>
+            <button class="filter-btn legend-global" data-filter="global" aria-pressed="false"><span class="dot"></span>全球事件</button>
+            <button class="filter-btn legend-art" data-filter="art" aria-pressed="false"><span class="dot"></span>藝術</button>
+            <button class="filter-btn legend-design" data-filter="design" aria-pressed="false"><span class="dot"></span>設計</button>
+            <button class="filter-btn legend-architecture" data-filter="architecture" aria-pressed="false"><span class="dot"></span>建築</button>
+          </div>
+          <div class="axis">
+            <div class="axis-label" aria-hidden="true"></div>
+            <div class="ticks" id="ticks"></div>
+          </div>
+          <div class="timeline" id="timelineGrid"></div>
+          <div class="empty" id="emptyState" hidden>找不到符合條件的事件，請放寬搜尋或切換時間尺度。</div>
+        </div>
+
+        <article class="detail" id="detailPanel" aria-live="polite"></article>
+      </section>
+
+      <section class="context" id="periods">
+        <div class="section-head">
+          <div>
+            <h2>四段讀法</h2>
+            <p>這張表不是要把歷史壓成單線進步，而是讓你看到：每個形式變化背後，都牽連材料、媒體、制度、城市、殖民與全球交換。</p>
+          </div>
+        </div>
+        <div class="periods">
+          <article class="period">
+            <time>約 1400-1700</time>
+            <h3>比例、透視與帝國航路</h3>
+            <p>文藝復興的人文主義、印刷與遠洋貿易改變圖像傳播；宮廷、教會與城市國家共同塑造藝術與建築的公共性。</p>
+          </article>
+          <article class="period">
+            <time>約 1700-1850</time>
+            <h3>啟蒙、革命與工業物件</h3>
+            <p>考古學、公共博物館、機械生產與殖民展覽讓「風格」開始被分類，也讓設計成為日常商品與國家形象的一部分。</p>
+          </article>
+          <article class="period">
+            <time>約 1850-1970</time>
+            <h3>現代主義的承諾與裂縫</h3>
+            <p>攝影、鋼鐵、混凝土、戰爭與都市化推動前衛藝術、Bauhaus、國際式建築，也引出對標準化與權力的反省。</p>
+          </article>
+          <article class="period">
+            <time>約 1970-目前</time>
+            <h3>後現代、全球化與數位文化</h3>
+            <p>身份政治、網路平台、氣候危機與生成式工具讓創作從形式問題擴張到系統、資料、參與、倫理與永續。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="context" id="image-atlas">
+        <div class="section-head">
+          <div>
+            <h2>歷史圖像索引</h2>
+            <p>每個時間節點都補上對應圖像；圖片來源以 Wikipedia/Wikimedia 的公開縮圖與條目連結為主，適合教學瀏覽與後續查證。</p>
+          </div>
+        </div>
+        <div class="image-grid" id="imageGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="context" id="sources">
+        <div class="section-head">
+          <div>
+            <h2>來源・延伸閱讀</h2>
+            <p>下列來源適合繼續查年代、流派與案例；頁面事件採教學導覽式摘要，適合作為課程或研究提綱的起點。</p>
+          </div>
+          <a href="#timeline">回到時間表</a>
+        </div>
+        <div class="sources">
+          <article class="source-card">
+            <h3>藝術史</h3>
+            <p>跨地區年代、流派與作品背景。</p>
+            <a href="https://www.metmuseum.org/toah/" target="_blank" rel="noreferrer">The Met Heilbrunn Timeline of Art History</a>
+            <a href="https://www.tate.org.uk/art/art-terms" target="_blank" rel="noreferrer">Tate Art Terms</a>
+            <a href="https://www.moma.org/learn/moma_learning/" target="_blank" rel="noreferrer">MoMA Learning</a>
+          </article>
+          <article class="source-card">
+            <h3>設計史</h3>
+            <p>工藝改革、Bauhaus、現代設計與物件文化。</p>
+            <a href="https://www.vam.ac.uk/articles/arts-and-crafts-an-introduction" target="_blank" rel="noreferrer">V&A Arts and Crafts</a>
+            <a href="https://www.bauhaus-dessau.de/en/history/" target="_blank" rel="noreferrer">Bauhaus Dessau History</a>
+            <a href="https://www.cooperhewitt.org/" target="_blank" rel="noreferrer">Cooper Hewitt Smithsonian Design Museum</a>
+          </article>
+          <article class="source-card">
+            <h3>建築與城市</h3>
+            <p>建築風格、城市技術與現代建築脈絡。</p>
+            <a href="https://www.britannica.com/art/Western-architecture" target="_blank" rel="noreferrer">Encyclopaedia Britannica: Western Architecture</a>
+            <a href="https://www.architecture.com/" target="_blank" rel="noreferrer">Royal Institute of British Architects</a>
+            <a href="https://whc.unesco.org/" target="_blank" rel="noreferrer">UNESCO World Heritage Centre</a>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
