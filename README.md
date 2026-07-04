@@ -7,6 +7,7 @@
 - `index.html`: 網站結構與主要內容區塊。
 - `styles.css`: 視覺設計、響應式版面與互動狀態。
 - `app.js`: 39 筆歷史事件、篩選搜尋、時間軸互動、圖片索引與 Wikipedia/Wikimedia 圖片載入。
+- `.github/workflows/pages.yml`: GitHub Pages 自動部署流程。
 
 ## Historical Images
 
@@ -14,13 +15,7 @@
 
 ## GitHub Pages
 
-要公開成網站：
-
-1. 到 repository 的 `Settings`。
-2. 進入 `Pages`。
-3. Source 選 `Deploy from a branch`。
-4. Branch 選 `main`，資料夾選 `/root`。
-5. 儲存後等待部署完成。
+這個 repo 已加入 GitHub Pages 自動部署 workflow。若 GitHub 尚未啟用 Pages，請到 repository 的 `Settings` → `Pages`，將 Source 設為 `GitHub Actions`，再重新執行 workflow。
 
 預期網址：
 
